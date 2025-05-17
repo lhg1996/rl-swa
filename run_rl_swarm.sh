@@ -264,5 +264,23 @@ else
         --config "$CONFIG_PATH" \
         --game "$GAME"
 fi
+}
+
+RETRY_COUNT=0
+RETRY_DELAY=10 # 重试间隔时间（秒）
+# 主循环
+while true; do
+    echo_green ">> Starting training attempt $((RETRY_COUNT + 1))"
+    # 运行训练
+    if run_training; then
+        echo_green ">> Training completed successfully"
+    else
+        echo_green ">> Training failed, will retry after $RETRY_DELAY seconds"
+        sleep $RETRY_DELAY
+    fi
+    # 增加重试计数
+    RETRY_COUNT=$((RETRY_COUNT + 1))
+done
+
 
 wait  # Keep script running until Ctrl+C
