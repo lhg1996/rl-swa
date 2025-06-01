@@ -22,7 +22,7 @@ DEFAULT_PEER_MULTI_ADDRS="/ip4/38.101.215.13/tcp/30002/p2p/QmQ2gEXoPJg6iMBSUFWGz
 PEER_MULTI_ADDRS=${PEER_MULTI_ADDRS:-$DEFAULT_PEER_MULTI_ADDRS}
 
 # Check if host multi-address is given else set to default
-DEFAULT_HOST_MULTI_ADDRS="/ip4/0.0.0.0/tcp/38354"
+DEFAULT_HOST_MULTI_ADDRS="/ip4/0.0.0.0/tcp/38355"
 HOST_MULTI_ADDRS=${HOST_MULTI_ADDRS:-$DEFAULT_HOST_MULTI_ADDRS}
 
 # Path to an RSA private key. If this path does not exist, a new key pair will be created.
