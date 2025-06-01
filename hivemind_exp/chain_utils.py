@@ -15,7 +15,7 @@ SWARM_COORDINATOR_ABI_JSON = (
     f"hivemind_exp/contracts/SwarmCoordinator_{SWARM_COORDINATOR_VERSION}.json"
 )
 
-MODAL_PROXY_URL = "http://localhost:3014/api/"
+MODAL_PROXY_URL = "http://localhost:3016/api/"
 
 logger = logging.getLogger(__name__)
 
