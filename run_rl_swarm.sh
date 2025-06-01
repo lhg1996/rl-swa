@@ -151,10 +151,10 @@ if [ "$CONNECT_TO_TESTNET" = true ]; then
     sleep 5
 
     # Try to open the URL in the default browser
-    if open http://localhost:3024 2> /dev/null; then
-        echo_green ">> Successfully opened http://localhost:3024 inyour default browser."
+    if open http://localhost:3025 2> /dev/null; then
+        echo_green ">> Successfully opened http://localhost:3025 inyour default browser."
     else
-        echo ">> Failed to open http://localhost:3024 Please open it manually."
+        echo ">> Failed to open http://localhost:3025 Please open it manually."
     fi
 
     cd ..
@@ -171,7 +171,7 @@ if [ "$CONNECT_TO_TESTNET" = true ]; then
     # Wait until the API key is activated by the client
     echo "Waiting for API key to become activated..."
     while true; do
-        STATUS=$(curl -s "http://localhost:3024/api/get-api-key-status?orgId=$ORG_ID")
+        STATUS=$(curl -s "http://localhost:3025/api/get-api-key-status?orgId=$ORG_ID")
         if [[ "$STATUS" == "activated" ]]; then
             echo "API key is activated! Proceeding..."
             break
