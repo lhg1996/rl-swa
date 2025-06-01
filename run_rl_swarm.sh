@@ -22,7 +22,7 @@ DEFAULT_PEER_MULTI_ADDRS="/ip4/38.101.215.13/tcp/30002/p2p/QmQ2gEXoPJg6iMBSUFWGz
 PEER_MULTI_ADDRS=${PEER_MULTI_ADDRS:-$DEFAULT_PEER_MULTI_ADDRS}
 
 # Check if host multi-address is given else set to default
-DEFAULT_HOST_MULTI_ADDRS="/ip4/0.0.0.0/tcp/38342"
+DEFAULT_HOST_MULTI_ADDRS="/ip4/0.0.0.0/tcp/38343"
 HOST_MULTI_ADDRS=${HOST_MULTI_ADDRS:-$DEFAULT_HOST_MULTI_ADDRS}
 
 # Path to an RSA private key. If this path does not exist, a new key pair will be created.
@@ -151,10 +151,10 @@ if [ "$CONNECT_TO_TESTNET" = true ]; then
     sleep 5
 
     # Try to open the URL in the default browser
-    if open http://localhost:3007 2> /dev/null; then
-        echo_green ">> Successfully opened http://localhost:3007 inyour default browser."
+    if open http://localhost:3008 2> /dev/null; then
+        echo_green ">> Successfully opened http://localhost:3008 inyour default browser."
     else
-        echo ">> Failed to open http://localhost:3007 Please open it manually."
+        echo ">> Failed to open http://localhost:3008 Please open it manually."
     fi
 
     cd ..
